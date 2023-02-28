@@ -17,27 +17,5 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 app.use(express.static('public'));
 
-app.get('/', function (req, res) {
-  res.render('home', {
-    nombre: 'Xavier Anchapaxi',
-    titulo: 'Curso de node'
-  })
-})
 
-app.get('/generic', function (req, res) {
-    res.render('generic',{
-    nombre: 'Xavier Anchapaxi',
-    titulo: 'Curso de node'
-    })
-  })
-app.get('/elements', function (req, res) {
-  res.render('elements',{
-    nombre: 'Xavier Anchapaxi',
-    titulo: 'Curso de node'
-    })
-  })
-app.get('*', function (req, res) {
-    res.send('404 | Page not found')
-  })
-
-app.listen(port)
+app.listen(port)  
